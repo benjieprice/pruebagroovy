@@ -18,6 +18,18 @@ class UsuarioController {
         respond usuarioService.get(id)
     }
 
+    def login(String nombre, Integer documento){
+        Usuario usuario = usuarioService.findByNombre(nombre)
+        return usuario?.documento == documento ? nombre : null
+    }
+
+    def registrar(Usuario usuario){
+        Usuario newUsuario = usuarioService.findByNombre(nombre)
+        if(!newUsuario){
+
+        }
+    }
+
     def create() {
         respond new Usuario(params)
     }

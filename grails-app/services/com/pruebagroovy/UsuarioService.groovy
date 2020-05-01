@@ -7,6 +7,8 @@ interface UsuarioService {
 
     Usuario get(Serializable id)
 
+    Usuario findByNombre(String nombre);
+
     List<Usuario> list(Map args)
 
     Long count()
